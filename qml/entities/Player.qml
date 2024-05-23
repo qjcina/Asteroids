@@ -6,6 +6,9 @@ EntityBase {
 
     property point targetDirection: Qt.point(0,0)
 
+    width: 64
+    height: 64
+
     entityId: "player"
     entityType: "player"
     transform: Rotation {
@@ -19,8 +22,7 @@ EntityBase {
 
     MultiResolutionImage {
         id: shipImage
-        width: 64
-        height: 64
+        anchors.fill: player
         source: Qt.resolvedUrl("../../assets/ship_E.png")
     }
 
