@@ -24,6 +24,10 @@ GameWindow {
             entityContainer: scene
         }
 
+        PhysicsWorld {
+
+        }
+
         Player {
             id: player
             anchors.centerIn: scene
