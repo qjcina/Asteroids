@@ -2,7 +2,7 @@ import QtQuick
 import Felgo
 
 EntityBase {
-
+    id: bullet
     property alias velocity: collider.linearVelocity
 
     entityType: "bullet"
@@ -16,5 +16,12 @@ EntityBase {
     BoxCollider {
         id: collider
         anchors.fill: parent
+
+        categories: Box.Category2
+        collidesWith: Box.Category1
+
+        fixture.onBeginContact: (other, contactNormal) => {
+            bullet.removeEntity();
+        }
     }
 }
