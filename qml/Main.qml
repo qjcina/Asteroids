@@ -28,6 +28,10 @@ GameWindow {
 
         }
 
+        AsteroidSystem {
+
+        }
+
         Player {
             id: player
             anchors.centerIn: scene
