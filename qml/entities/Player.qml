@@ -26,6 +26,20 @@ EntityBase {
         source: Qt.resolvedUrl("../../assets/ship_E.png")
     }
 
+    BoxCollider {
+        anchors {
+            margins: player.width * 0.2
+            fill: player
+        }
+
+        categories: Box.Category3
+        collidesWith: Box.Category1
+
+        fixture.onBeginContact: (other, contactNormal) => {
+            livesSystem.decreaseLives();
+        }
+    }
+
     QtObject {
         id: internal
 
@@ -46,7 +60,7 @@ EntityBase {
 
     Timer {
         interval: 500
-        running: true
+        running: !scene.gameFinished
         repeat: true
 
         onTriggered: {
