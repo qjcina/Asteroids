@@ -37,6 +37,8 @@ EntityBase {
                 });
             }
 
+            scoreSystem.increaseScore();
+
             asteroid.removeEntity();
         }
     }

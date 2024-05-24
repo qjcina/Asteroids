@@ -1,6 +1,8 @@
 import Felgo
 import QtQuick
 
+import Asteroids
+
 import "entities"
 
 GameWindow {
@@ -32,9 +34,28 @@ GameWindow {
 
         }
 
+        ScoreSystem {
+            id: scoreSystem
+        }
+
         Player {
             id: player
             anchors.centerIn: scene
+        }
+
+        Text {
+            id: score
+
+            text: "Score: " + scoreSystem.currentScore
+            font.pixelSize: 28
+            color: "white"
+            anchors {
+                left: scene.gameWindowAnchorItem.left
+                top: scene.gameWindowAnchorItem.top
+
+                leftMargin: 10
+                rightMargin: 10
+            }
         }
 
         MouseArea {

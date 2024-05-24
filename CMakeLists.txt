@@ -23,6 +23,7 @@ list(REMOVE_ITEM AssetsFiles ${QmlFiles})
 
 qt_add_executable(appAsteroids
     main.cpp
+    src/ScoreSystem.h src/ScoreSystem.cpp
     ${QmlFiles}
     ${AssetsFiles}
 )
@@ -47,6 +48,7 @@ else()
     set(LiveLibrary)
 endif()
 
+target_include_directories(appAsteroids PRIVATE src/)
 target_compile_definitions(appAsteroids
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
