@@ -3,7 +3,7 @@ import QtQuick
 Timer {
     property var asteroidSpeed: ({ min: 75, max: 150 })
 
-    interval: 500
+    interval: 1000
     running: true
     repeat: true
 
