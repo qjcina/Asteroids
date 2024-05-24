@@ -15,9 +15,9 @@ EntityBase {
         source: Qt.resolvedUrl("../../assets/meteor_detailedLarge.png")
     }
 
-    BoxCollider {
+    CircleCollider {
         id: collider
-        anchors.fill: asteroidImage
+        radius: asteroidImage.width / 2 * 0.8
         categories: Box.Category1
         collidesWith: Box.Category2
 
