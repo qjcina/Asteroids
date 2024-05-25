@@ -12,6 +12,6 @@ ListView {
     delegate: MultiResolutionImage {
         width: 32
         height: 32
-        source: Qt.resolvedUrl("../assets/icon_plusSmall.png")
+        source: Qt.resolvedUrl("../../assets/icon_plusSmall.png")
     }
 }
