@@ -20,13 +20,27 @@ GameWindow {
     }
 
     Component {
+        id: highscoresSceneComponent
+        HighscoresScene {
+            onShowMenu: {
+                sceneLoader.sourceComponent = menuSceneComponent
+            }
+        }
+    }
+
+    Component {
         id: menuSceneComponent
         MenuScene {
             onStartGame: {
                 sceneLoader.sourceComponent = gameSceneComponent
             }
+
+            onShowHighscores: {
+                sceneLoader.sourceComponent = highscoresSceneComponent
+            }
         }
     }
+
     Component {
         id: gameSceneComponent
         GameScene {
