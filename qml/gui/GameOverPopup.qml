@@ -53,6 +53,7 @@ Item {
 
             onClicked: {
                 HighscoresSystem.saveScore(scoreSystem, nameInput.text);
+                scene.scoreSaved();
             }
         }
     }
