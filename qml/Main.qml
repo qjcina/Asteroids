@@ -4,6 +4,7 @@ import QtQuick
 import Asteroids
 
 import "entities"
+import "gui"
 
 GameWindow {
     id: gameWindow
@@ -97,6 +98,11 @@ GameWindow {
                 // touch point detection
                 player.targetDirection = Qt.point(mouse.x, mouse.y);
             }
+        }
+
+        GameOverPopup {
+            visible: scene.gameFinished
+            enabled: visible
         }
     }
 }

@@ -25,6 +25,7 @@ qt_add_executable(appAsteroids
     main.cpp
     src/ScoreSystem.h src/ScoreSystem.cpp
     src/LivesSystem.h src/LivesSystem.cpp
+    src/HighscoresSystem.h src/HighscoresSystem.cpp
     ${QmlFiles}
     ${AssetsFiles}
 )
