@@ -40,6 +40,10 @@ Scene {
         id: scoreSystem
     }
 
+    CleanupSystem {
+        id: cleanupSystem
+    }
+
     Player {
         id: player
         anchors.centerIn: scene
