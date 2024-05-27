@@ -34,12 +34,6 @@ Scene {
     LivesSystem {
         id: livesSystem
         scoreSystem: scoreSystem
-
-        onLivesChanged: {
-            if (livesSystem.lives === 0) {
-                // TODO: Show game over menu
-            }
-        }
     }
 
     ScoreSystem {
