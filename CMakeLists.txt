@@ -22,7 +22,7 @@ file(GLOB_RECURSE AssetsFiles RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} assets/* qml/
 list(REMOVE_ITEM AssetsFiles ${QmlFiles})
 
 qt_add_executable(appAsteroids
-    main.cpp
+    src/main.cpp
     src/ScoreSystem.h src/ScoreSystem.cpp
     src/LivesSystem.h src/LivesSystem.cpp
     src/HighscoresSystem.h src/HighscoresSystem.cpp
