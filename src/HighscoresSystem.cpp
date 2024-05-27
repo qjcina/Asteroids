@@ -22,7 +22,9 @@ void HighscoresSystem::saveScore(ScoreSystem* scoreSystem, const QString& name)
     m_Scores.push_back(qMakePair(name, score));
     std::sort(m_Scores.begin(), m_Scores.end(),
               [](const auto& lhs, const auto& rhs) { return lhs.second > rhs.second; });
-    m_Scores.removeLast();
+    if (m_Scores.size() > kMaxHighscores) {
+        m_Scores.removeLast();
+    }
 
     saveHighscores();
 }
